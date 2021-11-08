@@ -2,7 +2,7 @@
 Projekt zaliczeniowy nr 1 na zajęcia z przedmiotu "Wprowadzenie do aplikacji i rozwiązań opartych o Sztuczną Inteligencję i Microsoft Azure".
 
 ## Opis projektu
-Głównym założeniem projektu jest ułatwienie prowadzenia zdrowego trybu odżywiania się poprzez stworzenie aplikacji potafiącej dostarczać informacje o danych produktach spożywczych na podstawie załączonego przez użytkownika zdjęcia.
+Głównym założeniem projektu jest ułatwienie prowadzenia zdrowego trybu odżywiania się poprzez stworzenie aplikacji potafiącej dostarczać podstawowe informacje o produktach spożywczych znajdujących się na załączonym przez użytkownika zdjęciu.
 
 ## Zespół
 - Kacper Hołubowicz https://github.com/KacperHolubowicz
@@ -14,7 +14,7 @@ Aplikacja na podstawie dostarczonego przez użytkownika zdjęcia zawierającego 
 ## Schemat działania 
 1. Aplikacja przyjmuje od użytkownika obrazek.
 2. Aplikacja rozpoznaje produkty spożywcze znajdujące się na obrazie.
-3. Aplikacja pobiera informacje o produkdach z bazy danych.
+3. Aplikacja pobiera informacje o produktach z bazy danych.
 4. Aplikacja wyświetla użytkownikowi informacje o produktach.
 
 ## Architektura
