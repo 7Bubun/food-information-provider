@@ -18,7 +18,7 @@ Aplikacja na podstawie dostarczonego przez użytkownika zdjęcia zawierającego 
 4. Aplikacja wyświetla użytkownikowi informacje o produktach.
 
 ## Architektura
-![azure_architecture_proj1](https://user-images.githubusercontent.com/62255561/140769572-5de7527d-3f95-4a54-bb62-13d83230c3f4.jpg)
+![azure_arch_proj1](https://user-images.githubusercontent.com/62255561/140771476-b310f5ea-305b-48f2-8e45-39e86f2d019e.jpg)
 
 ## Stos technologiczny
 - App service
