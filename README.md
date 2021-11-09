@@ -18,13 +18,12 @@ Aplikacja na podstawie dostarczonego przez użytkownika zdjęcia zawierającego 
 4. Aplikacja wyświetla użytkownikowi informacje o produktach.
 
 ## Architektura
-![azure_arch_proj1](https://user-images.githubusercontent.com/62255561/140771476-b310f5ea-305b-48f2-8e45-39e86f2d019e.jpg)
+![azure_arch_proj1_v2](https://user-images.githubusercontent.com/62255561/140944571-dc086a48-c6ce-462b-a667-a94ddb02fb8d.jpg)
 
 ## Stos technologiczny
 - App service
 - SQL Database
 - Cognitive Service (Custom Vision)
-- Container Instances i/lub Logic Apps
 - .NET
 
 ## Zakres prac
@@ -35,4 +34,3 @@ Aplikacja na podstawie dostarczonego przez użytkownika zdjęcia zawierającego 
 - zgromadzenie danych o produktach i umieszczenie ich w bazie danych
 - napisanie aplikacji webowej do interakcji z użytkownikiem
 - utworzenie i konfiguracja App Service oraz wdrożenie aplikacji
-- wdrożenie modelu Custom Vision za pomocą Container Instances i/lub Logic Apps
