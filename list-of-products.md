@@ -1,10 +1,10 @@
 ## Lista produktów wykrywanych przez aplikację:
-- Woda butelkowana
-- Jabłka
-- Banany
-- Mandarynki
-- Czekolada (w opakowaniu)
-- Wyroby czekoladowe (rozpakowane)
-- Jajka
-- Opakowanie jajek
-- Słodkie napoje gazowane
+- Woda butelkowana {bottled_water}
+- Jabłko {apple}
+- Banan {banana}
+- Mandarynki i pomarańcze {orangelike}
+- Czekolada (w opakowaniu) {packed_chocolate}
+- Wyrób czekoladowy (rozpakowany) {unpacked_chocolate}
+- Jajko {egg}
+- Opakowanie jajek {packed_eggs}
+- Słodki napój gazowany {soft_drink}
