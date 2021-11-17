@@ -8,3 +8,13 @@
 - Jajko {egg}
 - Opakowanie jajek {packed_eggs}
 - Słodki napój gazowany {soft_drink}
+- Chipsy {chips}
+- Chleb {bread}
+- Masło (pochodzenia zwierzęcego) {butter}
+- Mleko (w butelce) {milk}
+- Cytryna {lemon}
+- Ser żółty (plasterkowany, w opakowaniu) {cheese}
+- Mięso {meat}
+- Pomidor {tomato}
+- Ogórek (surowy) {cucumber}
+- Ketchup {ketchup}
