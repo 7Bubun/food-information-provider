@@ -9,7 +9,7 @@ Głównym założeniem projektu jest ułatwienie prowadzenia zdrowego trybu odż
 - Jakub Grenda https://github.com/7Bubun
 
 ## Opis funkcjonalności
-Aplikacja na podstawie dostarczonego przez użytkownika zdjęcia zawierającego produkty żywnościowe wyświetla użytkownikowi informacje na temat wykrytych na obrazie artykułów spożywczych takie jak: przybliżona kaloryczność, pozytywne i negatywne właściwości odżywcze oraz ewentualny produkt zastępczy (jeśli istnieje zdrowsza alternatywa).
+Aplikacja na podstawie dostarczonego przez użytkownika zdjęcia zawierającego produkty żywnościowe wyświetla użytkownikowi informacje na temat wykrytych na obrazie artykułów spożywczych takie jak: przybliżona kaloryczność, pozytywne i negatywne właściwości odżywcze oraz dodatkowe informacje np. ewentualny produkt zastępczy.
 
 ## Schemat działania 
 1. Aplikacja przyjmuje od użytkownika obrazek.
