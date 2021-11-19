@@ -33,8 +33,9 @@ namespace WebApplication.Pages
                 prepareProductData(predictionModels);
             } catch(Exception)
             {
-                throw new ApplicationException("Custom Vision service could not process object from the URL you provided. " +
-                    "Make sure it is correct.");
+                //throw new ApplicationException("Custom Vision service could not process object from the URL you provided. " +
+                //   "Make sure it is correct.");
+                throw;
             }
             return RedirectToPage("Products/Index");
         }
@@ -48,8 +49,9 @@ namespace WebApplication.Pages
                 prepareProductData(predictionModels);
             } catch(Exception)
             {
-                throw new ApplicationException("Custom Vision service could not process the image file you provided. " +
-                    "Make sure it is a png, jpg or bmp image file.");
+                throw;
+                //throw new ApplicationException("Custom Vision service could not process the image file you provided. " +
+                //    "Make sure it is a png, jpg or bmp image file.");
             }
                 return RedirectToPage("Products/Index");
         }

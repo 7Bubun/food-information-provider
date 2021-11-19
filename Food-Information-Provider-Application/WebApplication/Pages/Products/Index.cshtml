@@ -5,25 +5,56 @@
 
 @if (Model.Products.Count > 0)
 {
-    <h1>Products found on uploaded image:</h1>
-    foreach (var prod in Model.Products)
+<table>
+    <tr><td class="products">Products</td><td class="energy">Energetic value for 100g</td><td>Advantages</td><td>Drawbacks</td><td>Additional information</td></tr>
+
+    @foreach (var prod in Model.Products)
     {
-        <h2>@prod.ProductName</h2>
-        <h3>Pros:</h3>
-        foreach (string p in prod.Pros)
+<tr>
+    <td class="products">
+        @prod.ProductName
+    </td>
+
+    <td class="energy">
+        @prod.EnergyValue
+    </td>
+
+    <td>
+        <ul>
+            @foreach (string p in prod.Pros)
+            {
+                <li>@p</li>
+            }
+        </ul>
+    </td>
+
+    <td>
+        <ul>
+            @if (prod.Cons != null)
+            {
+                @foreach (string c in prod.Cons)
+                {
+                    if (c != null)
+                    {
+                        <li>@c</li>
+                    }
+                }
+            }
+        </ul>
+    </td>
+
+    <td>
+        @if (!String.IsNullOrEmpty(prod.AdditionalInformation))
         {
-            <h4>@p</h4>
+            @prod.AdditionalInformation
         }
-        <h3>Cons:</h3>
-        foreach (string c in prod.Cons)
-        {
-            <h4>@c</h4>
-        }
-        if (!String.IsNullOrEmpty(prod.AdditionalInformation))
-        {
-            <h3>@prod.AdditionalInformation</h3>
-        }
+    </td>
+</tr>
     }
+
+</table>
+
+<a asp-page="../Index">GO BACK</a>
 }
 else
 {

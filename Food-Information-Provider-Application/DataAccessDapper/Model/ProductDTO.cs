@@ -9,6 +9,6 @@
 
 #nullable enable
         public string? Cons { get; set; }
-        public string? Additional { get; set; }
+        public string? Additional_Info { get; set; }
     }
 }

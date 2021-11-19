@@ -12,7 +12,7 @@ namespace DataAccessDapper.DataAccess
             this.connectionString = connectionString;
         }
 
-        private string sql = "SELECT N.PRODUCT_TAG, P.PRODUCT_NAME, P.PROS, P.CONS, P.ADDITIONAL_INFO " +
+        private readonly string sql = "SELECT N.PRODUCT_TAG, P.PRODUCT_NAME, P.PROS, P.CONS, P.ADDITIONAL_INFO, P.ENERGY_VALUE_RANGE, P.ADDITIONAL_INFO " +
                              "FROM NAMETAGS N " +
                              "JOIN PRODUCT_DATA P ON P.PRODUCT_NAME = N.PRODUCT_NAME " +
                              "WHERE N.PRODUCT_TAG = @ProductTag ";

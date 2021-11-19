@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using Microsoft.Data.Sqlite;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace DataAccessDapper.DataAccess
@@ -7,7 +8,7 @@ namespace DataAccessDapper.DataAccess
     {
         internal static IDbConnection GetConnection(string connectionString)
         {
-            return new SqlConnection(connectionString);
+            return new SqliteConnection(connectionString);
         }
     }
 }

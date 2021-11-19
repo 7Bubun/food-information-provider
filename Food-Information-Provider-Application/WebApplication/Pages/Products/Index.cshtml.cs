@@ -11,7 +11,7 @@ namespace WebApplication.Pages.Products
         [BindProperty] public List<ProductViewModel> Products { get; private set; }
         public void OnGet()
         {
-             Products = JsonSerializer.Deserialize<List<ProductViewModel>>(TempData["Products"] as string);
+            Products = JsonSerializer.Deserialize<List<ProductViewModel>>(TempData.Peek("Products") as string);
         }
     }
 }
