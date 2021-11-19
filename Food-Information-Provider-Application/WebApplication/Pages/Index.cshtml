@@ -1,0 +1,34 @@
+﻿@page
+@model WebApplication.Pages.IndexModel
+@{
+}
+<h1>Food information provider</h1>
+
+<div id="upload">
+    <button id="button_url">URL</button>
+        <form class="hide" id="form_url" method="post" asp-page-handler="url">
+            <div>
+                <label>Image URL</label>
+                <input type="text" name="imageUrl" asp-for="@Model.ImageUrl"/>
+            </div>
+            <div>
+                <input type="submit" value="Send"/>
+            </div>
+        </form>
+    <button id="button_file">File</button>
+        <form class="hide" enctype="multipart/form-data" id="form_file" method="post" asp-page-handler="file">
+            <div>
+                <label>Image file</label>
+                <input type="file" name="imageFile" asp-for="@Model.ImageFile"/>
+            </div>
+            <div>
+                <input type="submit" value="Send" />
+            </div>
+        </form>
+</div>
+
+<div id="data">
+
+</div>
+
+<script src="~/js/script.js"></script>

@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+}
+
+@if (Model.Products.Count > 0)
+{
+    <h1>Products found on uploaded image:</h1>
+    foreach (var prod in Model.Products)
+    {
+        <h2>@prod.ProductName</h2>
+        <h3>Pros:</h3>
+        foreach (string p in prod.Pros)
+        {
+            <h4>@p</h4>
+        }
+        <h3>Cons:</h3>
+        foreach (string c in prod.Cons)
+        {
+            <h4>@c</h4>
+        }
+        if (!String.IsNullOrEmpty(prod.AdditionalInformation))
+        {
+            <h3>@prod.AdditionalInformation</h3>
+        }
+    }
+}
+else
+{
+    <h1>Unfortunately, no products were found on uploaded image. Keep in mind that our application is not perfect.</h1>
+}
