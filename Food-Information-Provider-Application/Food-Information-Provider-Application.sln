@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomVisionService", "Cust
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplication\WebApplication.csproj", "{80BAA1D5-1615-477C-997E-C38776A22E2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessDapper", "DataAccessDapper\DataAccessDapper.csproj", "{A77E33B4-463B-472A-BACE-BC3931B157FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessDapper", "DataAccessDapper\DataAccessDapper.csproj", "{A77E33B4-463B-472A-BACE-BC3931B157FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

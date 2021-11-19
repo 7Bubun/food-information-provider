@@ -1,30 +1,32 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CustomVisionService.Predictions;
 using DataAccessDapper.DataAccess;
+using Microsoft.Extensions.Configuration;
 
 namespace WebApplication
 {
     public class Startup
     {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+        public IConfiguration Configuration { get; private set; }
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
             services.AddSession();
             services.AddScoped<IPredictionService>(sp => new PredictionService(
-                predictionEndpoint: "https://westeurope.api.cognitive.microsoft.com",
-                projectId: "38b15e02-55cc-4459-9586-b82f938ff613",
-                publishedProjectName: "TestingPurpose",
-                predictionKey: "0e9026388d194eb9a961869302df5bf9"
+                predictionEndpoint: Configuration["CustomVision:Endpoint"],
+                projectId: Configuration["CustomVision:ProjectID"],
+                publishedProjectName: Configuration["CustomVision:ProjectName"],
+                predictionKey: Configuration["CustomVision:Key"]
                 ));
-            services.AddScoped<IProductConnection>(sp => new ProductConnection());
+            services.AddScoped<IProductConnection>(sp => new ProductConnection(Configuration.GetConnectionString("Production")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

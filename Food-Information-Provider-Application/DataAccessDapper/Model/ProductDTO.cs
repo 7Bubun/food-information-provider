@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace DataAccessDapper.Model
+﻿namespace DataAccessDapper.Model
 {
     public class ProductDTO
     {

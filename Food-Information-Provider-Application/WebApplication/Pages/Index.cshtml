@@ -19,7 +19,7 @@
         <form class="hide" enctype="multipart/form-data" id="form_file" method="post" asp-page-handler="file">
             <div>
                 <label>Image file</label>
-                <input type="file" name="imageFile" asp-for="@Model.ImageFile"/>
+                <input type="file" name="imageFile" asp-for="@Model.ImageFile" accept="image/jpeg, image/png, image/bmp"/>
             </div>
             <div>
                 <input type="submit" value="Send" />

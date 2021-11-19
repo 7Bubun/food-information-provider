@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using CustomVisionService.Predictions;
 using DataAccessDapper.DataAccess;
-using DataAccessDapper.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models;
@@ -29,16 +27,31 @@ namespace WebApplication.Pages
 
         public IActionResult OnPostUrl()
         {
-            IList<PredictionModel> predictionModels = prediction.GetPredictionsUrl(ImageUrl);
-            prepareProductData(predictionModels);
+            try
+            {
+                IList<PredictionModel> predictionModels = prediction.GetPredictionsUrl(ImageUrl);
+                prepareProductData(predictionModels);
+            } catch(Exception)
+            {
+                throw new ApplicationException("Custom Vision service could not process object from the URL you provided. " +
+                    "Make sure it is correct.");
+            }
             return RedirectToPage("Products/Index");
         }
 
         public IActionResult OnPostFile()
+        
         {
-            IList<PredictionModel> predictionModels = prediction.GetPredictionsFile(ImageFile.OpenReadStream());
-            prepareProductData(predictionModels);
-            return RedirectToPage("Products/Index");
+            try
+            {
+                IList<PredictionModel> predictionModels = prediction.GetPredictionsFile(ImageFile.OpenReadStream());
+                prepareProductData(predictionModels);
+            } catch(Exception)
+            {
+                throw new ApplicationException("Custom Vision service could not process the image file you provided. " +
+                    "Make sure it is a png, jpg or bmp image file.");
+            }
+                return RedirectToPage("Products/Index");
         }
 
         private void prepareProductData(IList<PredictionModel> predictionModels)

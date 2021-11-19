@@ -3,7 +3,6 @@ using Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models;
 using Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
 
 namespace CustomVisionService.Predictions
 {
@@ -29,18 +28,6 @@ namespace CustomVisionService.Predictions
         public IList<PredictionModel> GetPredictionsFile(Stream image)
         {
             return client.DetectImage(projectId, publishedProjectName, image).Predictions;
-        }
-
-        public async Task<IList<PredictionModel>> GetPredictionsUrlAsync(string url)
-        {
-            var result = await client.DetectImageUrlAsync(projectId, publishedProjectName, new ImageUrl(url));
-            return result.Predictions;
-        }
-
-        public async Task<IList<PredictionModel>> GetPredictionsFileAsync(Stream image)
-        {
-            var result = await client.DetectImageAsync(projectId, publishedProjectName, image);
-            return result.Predictions;
         }
     }
 }
