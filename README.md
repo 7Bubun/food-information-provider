@@ -34,3 +34,18 @@ Aplikacja na podstawie dostarczonego przez użytkownika zdjęcia zawierającego 
 - zgromadzenie danych o produktach i umieszczenie ich w bazie danych
 - napisanie aplikacji webowej do interakcji z użytkownikiem
 - utworzenie i konfiguracja App Service oraz wdrożenie aplikacji
+
+## Podział zadań
+- Przygotowanie grupy zasobów - Jakub Grenda
+- Custom Vision
+  - zgromadzenie danych potrzebnych do trenowania modelu - Jakub Grenda oraz Kacper Hołubowicz
+  - otagowanie poszczególnych produktów na znalezionych obrazkach - Jakub Grenda oraz Kacper Hołubowicz
+  - przeprowadzenie testów dokładności poszczególnych iteracji - Jakub Grenda oraz Kacper Hołubowicz
+- SQL Database
+  - znalezienie informacji o produktach żywnościowych obsługiwanych przez aplikację - Jakub Grenda
+  - przygotowanie skryptów sql inicjujących bazę danych - Jakub Grenda
+- App Service
+  - przygotowanie logiki aplikacji webowej (komunikacja z modelem Custom Vision i bazą danych) - Kacper Hołubowicz
+  - przygotowanie warstwy graficznego interfejsu użytkownika - Jakub Grenda oraz Kacper Hołubowicz
+  - wdrożenie aplikacji na Azure App Service - Jakub Grenda oraz Kacper Hołubowicz
+ 
