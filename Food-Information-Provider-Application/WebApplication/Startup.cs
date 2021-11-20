@@ -26,7 +26,7 @@ namespace WebApplication
                 publishedProjectName: Configuration["CustomVision:ProjectName"],
                 predictionKey: Configuration["CustomVision:Key"]
                 ));
-            services.AddScoped<IProductConnection>(sp => new ProductConnection(Configuration.GetConnectionString("Testing")));
+            services.AddScoped<IProductConnection>(sp => new ProductConnection(Configuration.GetConnectionString("Production")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

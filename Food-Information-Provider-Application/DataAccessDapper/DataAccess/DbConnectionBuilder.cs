@@ -8,7 +8,7 @@ namespace DataAccessDapper.DataAccess
     {
         internal static IDbConnection GetConnection(string connectionString)
         {
-            return new SqliteConnection(connectionString);
+            return new SqlConnection(connectionString);
         }
     }
 }
