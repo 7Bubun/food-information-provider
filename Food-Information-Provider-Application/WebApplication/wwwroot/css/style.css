@@ -50,3 +50,41 @@ td.energy {
 .hide {
     display: none;
 }
+
+.but {
+    border: none;
+    background-color: #9C7A4B;
+    font-size: 14px;
+    padding: 8px 16px;
+    text-align: center;
+    font-family: inherit;
+    color: antiquewhite;
+    border-radius: 20%;
+    margin-left: 2em;
+    margin-right: 2em;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+    .but:hover {
+        background-color: #bd9f75;
+    }
+
+.clicked {
+    background-color: #bd9f75;
+}
+
+.image_data {
+    display: inline-block;
+    margin: 2em 4em 0em 2em;
+}
+
+label {
+    display:block;
+    margin-bottom: 16px;
+}
+
+.return {
+    display: inline-block;
+    margin-top: 32px;
+}

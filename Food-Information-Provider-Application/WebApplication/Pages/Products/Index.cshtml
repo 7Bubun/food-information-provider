@@ -5,58 +5,59 @@
 
 @if (Model.Products.Count > 0)
 {
-<table>
-    <tr><td class="products">Products</td><td class="energy">Energetic value for 100g</td><td>Advantages</td><td>Drawbacks</td><td>Additional information</td></tr>
+    <table>
+        <tr><td class="products">Products</td><td class="energy">Energetic value for 100g</td><td>Advantages</td><td>Drawbacks</td><td>Additional information</td></tr>
 
-    @foreach (var prod in Model.Products)
-    {
-<tr>
-    <td class="products">
-        @prod.ProductName
-    </td>
-
-    <td class="energy">
-        @prod.EnergyValue
-    </td>
-
-    <td>
-        <ul>
-            @foreach (string p in prod.Pros)
-            {
-                <li>@p</li>
-            }
-        </ul>
-    </td>
-
-    <td>
-        <ul>
-            @if (prod.Cons != null)
-            {
-                @foreach (string c in prod.Cons)
-                {
-                    if (c != null)
-                    {
-                        <li>@c</li>
-                    }
-                }
-            }
-        </ul>
-    </td>
-
-    <td>
-        @if (!String.IsNullOrEmpty(prod.AdditionalInformation))
+        @foreach (var prod in Model.Products)
         {
-            @prod.AdditionalInformation
+            <tr>
+                <td class="products">
+                    @prod.ProductName
+                </td>
+
+                <td class="energy">
+                    @prod.EnergyValue
+                </td>
+
+                <td>
+                    <ul>
+                        @foreach (string p in prod.Pros)
+                        {
+                            <li>@p</li>
+                        }
+                    </ul>
+                </td>
+
+                <td>
+                    <ul>
+                        @if (prod.Cons != null)
+                        {
+                            @foreach (string c in prod.Cons)
+                            {
+                                if (c != null)
+                                {
+                                    <li>@c</li>
+                                }
+                            }
+                        }
+                    </ul>
+                </td>
+
+                <td>
+                    @if (!String.IsNullOrEmpty(prod.AdditionalInformation))
+                    {
+                        @prod.AdditionalInformation
+                    }
+                </td>
+            </tr>
         }
-    </td>
-</tr>
-    }
 
-</table>
+    </table>
 
-<a asp-page="../Index">GO BACK</a>
 }
 else
 {
     <h1>Unfortunately, no products were found on uploaded image. Keep in mind that our application is not perfect.</h1>
 }
+
+<a class="but return" asp-page="../Index">GO BACK</a>

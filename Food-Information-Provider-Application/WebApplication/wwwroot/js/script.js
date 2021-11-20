@@ -6,9 +6,13 @@ var formFile = document.getElementById("form_file");
 buttonUrl.addEventListener("click", () => {
     formUrl.classList.remove("hide");
     formFile.classList.add("hide");
+    buttonUrl.classList.add("clicked");
+    buttonFile.classList.remove("clicked");
 });
 
 buttonFile.addEventListener("click", () => {
     formFile.classList.remove("hide");
     formUrl.classList.add("hide");
+    buttonUrl.classList.remove("clicked");
+    buttonFile.classList.add("clicked");
 });
