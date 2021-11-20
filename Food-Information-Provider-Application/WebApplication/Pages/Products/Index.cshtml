@@ -1,0 +1,75 @@
+﻿@page
+@model IndexModel
+@{
+}
+
+@if (Model.Products.Count > 0)
+{
+    @if (@Model.ImageUrl != null)
+    {
+        <img src="@Model.ImageUrl" />
+    }
+
+    <table>
+        <tr>
+            <td class="header">Product</td>
+            <td class="header">kcal/100g</td>
+            <td class="header">Advantages</td>
+            <td class="header">Drawbacks</td>
+            <td class="header">Additional information</td>
+        </tr>
+
+        @foreach (var prod in Model.Products)
+        {
+            <tr>
+                <td class="bigger-content">
+                    @prod.ProductName
+                </td>
+
+                <td class="bigger-content">
+                    @prod.EnergyValue
+                </td>
+
+                <td class="pros-cons">
+                    <ul>
+                        @foreach (string p in prod.Pros)
+                        {
+                            <li>@p</li>
+                        }
+                    </ul>
+                </td>
+
+                <td class="pros-cons">
+                    <ul>
+                        @if (prod.Cons != null)
+                        {
+                            @foreach (string c in prod.Cons)
+                            {
+                                if (c != null)
+                                {
+                                    <li>@c</li>
+                                }
+                            }
+                        }
+                    </ul>
+                </td>
+
+                <td class="additional-info">
+                    @if (!String.IsNullOrEmpty(prod.AdditionalInformation))
+                    {
+                        @prod.AdditionalInformation
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+else
+{
+    <h1>Unfortunately, no products were found on uploaded image. Keep in mind that our application is not perfect.</h1>
+}
+
+<a class="but return" asp-page="../Index">GO BACK</a>
+
+<div class="spacer"></div>
