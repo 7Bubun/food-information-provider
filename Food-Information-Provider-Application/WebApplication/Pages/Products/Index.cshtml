@@ -5,21 +5,32 @@
 
 @if (Model.Products.Count > 0)
 {
+    @if (@Model.ImageUrl != null)
+    {
+        <img src="@Model.ImageUrl" />
+    }
+
     <table>
-        <tr><td class="products">Products</td><td class="energy">Energetic value for 100g</td><td>Advantages</td><td>Drawbacks</td><td>Additional information</td></tr>
+        <tr>
+            <td class="header">Product</td>
+            <td class="header">kcal/100g</td>
+            <td class="header">Advantages</td>
+            <td class="header">Drawbacks</td>
+            <td class="header">Additional information</td>
+        </tr>
 
         @foreach (var prod in Model.Products)
         {
             <tr>
-                <td class="products">
+                <td class="bigger-content">
                     @prod.ProductName
                 </td>
 
-                <td class="energy">
+                <td class="bigger-content">
                     @prod.EnergyValue
                 </td>
 
-                <td>
+                <td class="pros-cons">
                     <ul>
                         @foreach (string p in prod.Pros)
                         {
@@ -28,7 +39,7 @@
                     </ul>
                 </td>
 
-                <td>
+                <td class="pros-cons">
                     <ul>
                         @if (prod.Cons != null)
                         {
@@ -43,7 +54,7 @@
                     </ul>
                 </td>
 
-                <td>
+                <td class="additional-info">
                     @if (!String.IsNullOrEmpty(prod.AdditionalInformation))
                     {
                         @prod.AdditionalInformation
@@ -53,7 +64,6 @@
         }
 
     </table>
-
 }
 else
 {
@@ -61,3 +71,5 @@ else
 }
 
 <a class="but return" asp-page="../Index">GO BACK</a>
+
+<div class="spacer"></div>

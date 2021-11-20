@@ -5,26 +5,51 @@
 }
 
 table {
+    width: 100%;
     background-color: #414141;
     padding: 10px;
+    margin-top: 50px;
     border: 1px solid black;
     border-collapse: collapse;
 }
 
 tr, td {
     border: 1px solid black;
-    
 }
 
 ul {
     text-align: left;
+    line-height: 120%;
+    list-style-type: circle;
+    padding-right: 5px;
 }
 
-td.products{
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 256px;
+    max-width: 1024px;
+    width: auto;
+    border: 2px solid black;
 }
 
-td.energy {
-    width: 200px;
+td.header{
+    font-size: x-large;
+    padding: 20px;
+}
+
+td.bigger-content {
+    font-size: 18px;
+}
+
+td.pros-cons {
+    padding-right: 20px;
+}
+
+td.additional-info {
+    font-style: italic;
+    padding: 5px;
 }
 
 #wrapper {
@@ -44,7 +69,13 @@ td.energy {
     margin-left: auto;
     margin-right: auto;
     width: 1080px;
+    align-items: center;
     text-align: center;
+}
+
+.centered-and-enlarged {
+    margin: 180px;
+    font-size: 24px;
 }
 
 .hide {
@@ -54,7 +85,7 @@ td.energy {
 .but {
     border: none;
     background-color: #9C7A4B;
-    font-size: 14px;
+    font-size: 18px;
     padding: 8px 16px;
     text-align: center;
     font-family: inherit;
@@ -63,12 +94,13 @@ td.energy {
     margin-left: 2em;
     margin-right: 2em;
     transition-duration: 0.5s;
-    cursor: pointer;
+    text-decoration: none;
 }
 
-    .but:hover {
-        background-color: #bd9f75;
-    }
+.but:hover {
+    background-color: #bd9f75;
+    cursor: pointer;
+}
 
 .clicked {
     background-color: #bd9f75;
@@ -77,14 +109,19 @@ td.energy {
 .image_data {
     display: inline-block;
     margin: 2em 4em 0em 2em;
+    text-align: left;
 }
 
 label {
-    display:block;
+    display: block;
     margin-bottom: 16px;
 }
 
 .return {
     display: inline-block;
     margin-top: 32px;
+}
+
+.spacer {
+    height: 64px;
 }

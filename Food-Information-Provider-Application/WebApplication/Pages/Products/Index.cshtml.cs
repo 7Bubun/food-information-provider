@@ -9,8 +9,11 @@ namespace WebApplication.Pages.Products
     public class IndexModel : PageModel
     {
         [BindProperty] public List<ProductViewModel> Products { get; private set; }
-        public void OnGet()
+        [BindProperty] public string ImageUrl { get; private set; }
+
+        public void OnGet([FromQuery] string? imageUrl)
         {
+            ImageUrl = imageUrl;
             Products = JsonSerializer.Deserialize<List<ProductViewModel>>(TempData.Peek("Products") as string);
         }
     }

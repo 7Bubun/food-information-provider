@@ -2,29 +2,31 @@
 @model WebApplication.Pages.IndexModel
 @{
 }
-<h1>Food information provider</h1>
 
-<div id="upload">
-    <button id="button_url" class="but">URL</button>
-    <button id="button_file" class="but">File</button>
-    <form class="hide" id="form_url" method="post" asp-page-handler="url">
-        <div class="image_data">
-            <label>Type image URL here:</label>
-            <input type="text" name="imageUrl" asp-for="@Model.ImageUrl" />
-            <input type="submit" value="Send" class="but" />
-        </div>
-    </form>
-    <form class="hide" enctype="multipart/form-data" id="form_file" method="post" asp-page-handler="file">
-        <div class="image_data">
-            <label>Choose file from your device:</label>
-            <input type="file" name="imageFile" asp-for="@Model.ImageFile" accept="image/jpeg, image/png, image/bmp" />
-            <input type="submit" value="Send" class="but" />
-        </div>
-    </form>
-</div>
+<div class="centered-and-enlarged">
+    <h1>Food information provider</h1>
+    <div id="upload">
+        <button id="button_url" class="but">URL</button>
+        <button id="button_file" class="but">File</button>
+        <form class="hide" id="form_url" method="post" asp-page-handler="url">
+            <div class="image_data">
+                <label>Type image URL here:</label>
+                <input type="text" name="imageUrl" asp-for="@Model.ImageUrl" />
+                <input type="submit" value="Send" class="but" />
+            </div>
+        </form>
+        <form class="hide" enctype="multipart/form-data" id="form_file" method="post" asp-page-handler="file">
+            <div class="image_data">
+                <label>Choose file from your device:</label>
+                <input type="file" name="imageFile" asp-for="@Model.ImageFile" accept="image/jpeg, image/png, image/bmp" />
+                <input type="submit" value="Send" class="but" />
+            </div>
+        </form>
+    </div>
 
-<div id="data">
+    <div id="data">
 
+    </div>
 </div>
 
 <script src="~/js/script.js"></script>

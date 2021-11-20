@@ -36,7 +36,7 @@ namespace WebApplication.Pages
                 throw new ApplicationException("Custom Vision service could not process object from the URL you provided. " +
                    "Make sure it is correct.");
             }
-            return RedirectToPage("Products/Index");
+            return RedirectToPage("Products/Index", new {imageUrl = ImageUrl });
         }
 
         public IActionResult OnPostFile()
