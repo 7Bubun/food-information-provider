@@ -27,7 +27,7 @@ Aplikacja na podstawie dostarczonego przez użytkownika zdjęcia zawierającego 
 - App service
 - SQL Database
 - Cognitive Service (Custom Vision)
-- .NET
+- .NET 5, w tym ASP.NET Core Razor Pages oraz ORM Dapper 
 
 ## Zakres prac
 - utworzenie usługi typu Custom Vision
