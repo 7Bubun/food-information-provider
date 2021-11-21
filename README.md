@@ -8,6 +8,9 @@ Głównym założeniem projektu jest ułatwienie prowadzenia zdrowego trybu odż
 - Kacper Hołubowicz https://github.com/KacperHolubowicz
 - Jakub Grenda https://github.com/7Bubun
 
+## Wideoprezentacja i przedstawienie aplikacji
+- https://www.youtube.com/watch?v=PNNGesnDrQI
+
 ## Opis funkcjonalności
 Aplikacja na podstawie dostarczonego przez użytkownika zdjęcia zawierającego produkty żywnościowe wyświetla użytkownikowi informacje na temat wykrytych na obrazie artykułów spożywczych takie jak: przybliżona kaloryczność, pozytywne i negatywne właściwości odżywcze oraz dodatkowe informacje np. ewentualny produkt zastępczy.
 
